@@ -1,11 +1,10 @@
 import '../style/containers/app.css'
+import Header from "../components/Header"
 
 function App() {
 
   return (
-    <div className="hello-meme">
-      hello meme
-    </div>
+    < Header />
   )
 }
 
