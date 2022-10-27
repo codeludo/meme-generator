@@ -1,0 +1,45 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	height: 65px;
+	width: 100%;
+	background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+	color: white;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	margin-left: 18px;
+}
+
+.logo-img {
+	height: 38px;
+	width: 38px;
+	margin: 0 4px;
+}
+
+.logo-title {
+	margin: 0 4px;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 24px;
+	letter-spacing: -0.1em;
+}
+
+.header-description {
+	display: flex;
+	margin-right: 37px;
+	align-items: center;
+}
+
+.header-course {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: right;
+}
+
