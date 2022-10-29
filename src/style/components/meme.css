@@ -19,6 +19,7 @@
 	margin: 0 18px;
 	text-indent: 18px;
     font-family: "Karla", sans-serif;
+    border: none;
 
 }
 
@@ -43,7 +44,9 @@
 .btn-image {
 	height: 40px;
 	width: 496px;
+    margin: 0;
 	border-radius: 5px;
+    border: none;
 	background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
 	color: white;
 	font-size: 16px;

@@ -1,10 +1,22 @@
 import "../style/components/meme.css"
 import React from "react"
+import data from "../utils/data"
 
 const Meme = () => {
+
+    
+    function memesImage() {
+        const memesArray = data.data.memes
+        const randNum = Math.floor(Math.random()*memesArray.length-1)
+        const imageUrl = memesArray[randNum].url
+        console.log("image: " + imageUrl)
+        return imageUrl
+    }
+
+
 	return (
 		<main>
-			<form action="" className="meme-form">
+			<div action="" className="meme-form">
 				<div className="input-text">
 					<input
 						type="text"
@@ -17,11 +29,11 @@ const Meme = () => {
 						placeholder="bottom text"
 					/>
 				</div>
-				<button className="btn-image">Get a new meme image 🖼</button>
+				<button onClick={memesImage} className="btn-image">Get a new meme image 🖼</button>
                 <figure>
                     <img className="image" src="https://i.imgflip.com/46y0ne.png" alt="meme" />
                 </figure>
-			</form>
+			</div>
 		</main>
 	)
 }
