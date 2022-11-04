@@ -18,9 +18,8 @@
 	border-radius: 5px;
 	margin: 0 18px;
 	text-indent: 18px;
-    font-family: "Karla", sans-serif;
-    border: none;
-
+	font-family: "Karla", sans-serif;
+	border: none;
 }
 
 .bottom-text::placeholder {
@@ -29,7 +28,7 @@
 	line-height: 14px;
 	letter-spacing: 0em;
 	text-align: left;
-    color: #0D0D0D;
+	color: #0d0d0d;
 }
 
 .top-text::placeholder {
@@ -38,15 +37,15 @@
 	line-height: 14px;
 	letter-spacing: 0em;
 	text-align: left;
-    color: #0D0D0D;
+	color: #0d0d0d;
 }
 
 .btn-image {
 	height: 40px;
 	width: 496px;
-    margin: 0;
+	margin: 0;
 	border-radius: 5px;
-    border: none;
+	border: none;
 	background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
 	color: white;
 	font-size: 16px;
@@ -54,7 +53,13 @@
 	line-height: 19px;
 	letter-spacing: -0.1em;
 	text-align: center;
-    font-family: "Karla", sans-serif;
+	font-family: "Karla", sans-serif;
+}
 
+.image {
+	height: 477px;
+	width: 477px;
+	object-fit: contain;
+	border-radius: 2px;
 }
 
