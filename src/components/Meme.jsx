@@ -18,6 +18,18 @@ const Meme = () => {
 		},
 		[]
 	)
+	/**
+	 * useEffect with async
+	 * 
+	 * React.useEffect(() => {
+	 * async function getMemes() {
+	 * const res = await fetch("https://api.imgflip.com/get_memes")
+	 * const data = await res.json()
+	 * setAllMemes(data.data.memes)
+	 * }
+	 * getMemes()
+	 * }, [])
+	 */
 
 	function getMemesImage() {
 		const randNum = Math.floor(Math.random() * allMemes.length - 1)
