@@ -1,3 +1,5 @@
+// data en desuso desde la implementación de useEffects
+
 export default {
 	success: true,
 	data: {
