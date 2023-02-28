@@ -1,6 +1,5 @@
 import "../style/components/meme.css"
-import React, { useState } from "react"
-import data from "../utils/data"
+import React, { useEffect, useState } from "react"
 
 const Meme = () => {
 	const [meme, setMeme] = useState({
@@ -9,27 +8,34 @@ const Meme = () => {
 		randomImage: "https://i.imgflip.com/46y0ne.png",
 	})
 
-	const [allMemes, setAllMemes] = useState(data)
+	const [allMemes, setAllMemes] = useState([])
+
+	useEffect(
+		() => {
+			fetch('https://api.imgflip.com/get_memes')
+				.then(res => res.json())
+				.then(data => setAllMemes(data.data.memes))
+		},
+		[]
+	)
 
 	function getMemesImage() {
-		const memesArray = allMemes.data.memes
-		const randNum = Math.floor(Math.random() * memesArray.length - 1)
-		const imageUrl = memesArray[randNum].url
+		const randNum = Math.floor(Math.random() * allMemes.length - 1)
+		const imageUrl = allMemes[randNum].url
 		console.log("image: " + imageUrl)
 		setMeme((prevMeme) => {
 			return { ...prevMeme, randomImage: imageUrl }
 		})
 	}
 
-	function handleChange(event){
-		const {name, value} = event.target
-		setMeme(prevState => {
-			return ({
+	function handleChange(event) {
+		const { name, value } = event.target
+		setMeme((prevState) => {
+			return {
 				...prevState,
-				[name]: value
-			})
+				[name]: value,
+			}
 		})
-
 	}
 
 	return (
